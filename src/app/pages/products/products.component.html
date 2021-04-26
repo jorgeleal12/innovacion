@@ -1,164 +1,182 @@
 <nz-content style="margin-top: 50px">
-    <form nz-form class="login-form" [formGroup]="FormProducts">
-    <div nz-row>
-        <div nz-col nzSpan="18" nzOffset="3" class="ant-advanced-search-form">
-            <div nz-row>
-                <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
-                    [nzXXl]="{ span: 8 }">
-                    <nz-form-item>
-                        <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Producto
-                        </nz-form-label>
-                        <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
-                            nzErrorTip="No valido">
-                            <input nz-input formControlName="producto"/>
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
 
-                <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
-                    [nzXXl]="{ span: 8 }">
-                    <nz-form-item>
-                        <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Código
-                        </nz-form-label>
-                        <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
-                            nzErrorTip="Campo requerido">
-                            <input nz-input formControlName="codigo"/>
-                        </nz-form-control>
-                    </nz-form-item>
+    <div nz-col nzSpan="20" nzOffset="2" class="ant-advanced-search-form">
+    <nz-tabset [nzSelectedIndex]="index">
+        
+        <nz-tab nzTitle="Productos">
+            <form nz-form class="login-form" [formGroup]="FormProducts">
+                <div nz-row>
+                    <div nz-col nzSpan="22" nzOffset="1" class="ant-advanced-search-form">
+                        <div nz-row>
+                            <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                                [nzXXl]="{ span: 8 }">
+                                <nz-form-item>
+                                    <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Producto
+                                    </nz-form-label>
+                                    <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                                        nzErrorTip="No valido">
+                                        <input nz-input formControlName="producto"/>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+            
+                            <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                                [nzXXl]="{ span: 8 }">
+                                <nz-form-item>
+                                    <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Código
+                                    </nz-form-label>
+                                    <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                                        nzErrorTip="Campo requerido">
+                                        <input nz-input formControlName="codigo"/>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+            
+                            <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                                [nzXXl]="{ span: 8 }">
+                                <nz-form-item>
+                                    <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Estado
+                                    </nz-form-label>
+                                    <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                                        nzErrorTip="Campo requerido">
+                                    
+                                        <nz-select ngModel="lucy" nzAllowClear nzPlaceHolder="Estado" formControlName="estado">
+                                            <nz-option [nzValue]="true" nzLabel="Activo"></nz-option>
+                                            <nz-option [nzValue]="false" nzLabel="Inactivo"></nz-option>
+                                          </nz-select>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+            
+                            <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                                [nzXXl]="{ span: 8 }">
+                                <nz-form-item>
+                                    <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Descripción
+                                    </nz-form-label>
+                                    <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                                        nzErrorTip="Campo requerido">
+                                        <input nz-input formControlName="descripcion"/>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+            
+                            <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                                [nzXXl]="{ span: 8 }">
+                                <nz-form-item>
+                                    <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Precio
+                                    </nz-form-label>
+                                    <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                                        nzErrorTip="No valido">
+                                        <input nz-input formControlName="precio"/>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+            
+                            <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                                [nzXXl]="{ span: 8 }">
+                                <nz-form-item>
+                                    <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Categoría
+                                    </nz-form-label>
+                                    <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                                        nzErrorTip="Campo requerido">
+                                        <nz-select  nzAllowClear nzPlaceHolder="Estado" formControlName="idCategoria">
+                                            <nz-option *ngFor="let listCategory of listCategories" [nzLabel]="listCategory.nombre" [nzValue]="listCategory.id"></nz-option>
+                                          </nz-select>
+            
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                        </div>
+                        <div nz-row>
+                            <div nz-col [nzSpan]="24" class="search-area">
+                              <button nz-button [nzType]="'primary'" [disabled]="!FormProducts.valid" (click)="save()">Guardar</button>
+                              <button nz-button (click)="clear()" >Clear</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                </form>
+               <div nz-row style="margin-top: 20px;">
+                    <div nz-col nzSpan="22" nzOffset="1" class="ant-advanced-search-form">
+                        <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 24 }"
+                            [nzXXl]="{ span: 24 }">
+                            <nz-table [nzData]="listProducts1" [nzFrontPagination]="false" [nzBordered]="true" >
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Código</th>
+                                        <th>Estado</th>
+                                        <th>Descripción</th>
+                                        <th>Precio</th>
+                                        <th>Categoría</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let product of products$ | async;">
+                                        <ng-container *ngIf="product.estado == true">
+                                            <td>{{ product.producto }}</td>
+                                            <td>{{ product.codigo }}</td>
+                                            <td>Activo</td>
+                                            <td>{{ product.descripcion }}</td>
+                                            <td>{{ product.precio }}</td>
+                                            <td>{{ product.idCategoria }}</td>
+                                            <td> <button nz-button nzType="primary" (click)="edit(product)">Editar</button>
+                                                <nz-divider nzType="vertical"></nz-divider>
+                                                <button nz-button nzType="primary" nzDanger (click)="delete(product)">Eliminar</button>
+                                            </td>
+                                        </ng-container>
+                                    </tr>
+                                </tbody>
+                            </nz-table>
+                        </div>
+                    </div>
+                     <div nz-col nzSpan="22" nzOffset="1" class="ant-advanced-search-form" style="margin-top: 20px;">
+                        <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 24 }"
+                            [nzXXl]="{ span: 24 }">
+                            <nz-table [nzData]="listProducts1" [nzFrontPagination]="false" [nzBordered]="true">
+                                <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Código</th>
+                                        <th>Estado</th>
+                                        <th>Descripción</th>
+                                        <th>Precio</th>
+                                        <th>Categoría</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let product of products$ | async">
+                                        <ng-container *ngIf="product.estado == false">
+                                            <td>{{ product.producto }}</td>
+                                            <td>{{ product.codigo }}</td>
+                                            <td>Inactivo</td>
+                                            <td>{{ product.descripcion }}</td>
+                                            <td>{{ product.precio }}</td>
+                                            <td>   {{ product.idCategoria }}</td>
+            
+                                            <td> <button nz-button nzType="primary" (click)="edit(product)">Editar</button>
+                                                <nz-divider nzType="vertical"></nz-divider>
+                                                <button nz-button nzType="primary" nzDanger (click)="delete(product)">Eliminar</button>
+                                            </td>
+                                        </ng-container>
+                                    </tr>
+                                </tbody>
+                            </nz-table>
+                        </div>
+                    </div> 
+                </div> 
+        </nz-tab>
+        <nz-tab nzTitle="Categorias">
+            <ng-template nz-tab>
+         <app-categories  [idCategoria]="idCategoria" (ini)="edit_category($event)">
 
-                <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
-                    [nzXXl]="{ span: 8 }">
-                    <nz-form-item>
-                        <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Estado
-                        </nz-form-label>
-                        <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
-                            nzErrorTip="Campo requerido">
-                        
-                            <nz-select ngModel="lucy" nzAllowClear nzPlaceHolder="Estado" formControlName="estado">
-                                <nz-option [nzValue]="true" nzLabel="Activo"></nz-option>
-                                <nz-option [nzValue]="false" nzLabel="Inactivo"></nz-option>
-                              </nz-select>
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
+         </app-categories>
+        </ng-template>
+        </nz-tab>
+      
 
-                <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
-                    [nzXXl]="{ span: 8 }">
-                    <nz-form-item>
-                        <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Descripción
-                        </nz-form-label>
-                        <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
-                            nzErrorTip="Campo requerido">
-                            <input nz-input formControlName="descripcion"/>
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
-
-                <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
-                    [nzXXl]="{ span: 8 }">
-                    <nz-form-item>
-                        <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Precio
-                        </nz-form-label>
-                        <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
-                            nzErrorTip="No valido">
-                            <input nz-input formControlName="precio"/>
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
-
-                <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
-                    [nzXXl]="{ span: 8 }">
-                    <nz-form-item>
-                        <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Categoría
-                        </nz-form-label>
-                        <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
-                            nzErrorTip="Campo requerido">
-                            <nz-select ngModel="lucy" nzAllowClear nzPlaceHolder="Estado" formControlName="idCategoria">
-                                <nz-option *ngFor="let listCategory of listCategories" [nzLabel]="listCategory.nombre" [nzValue]="listCategory.id"></nz-option>
-                              </nz-select>
-
-                        </nz-form-control>
-                    </nz-form-item>
-                </div>
-            </div>
-            <div nz-row>
-                <div nz-col [nzSpan]="24" class="search-area">
-                  <button nz-button [nzType]="'primary'" [disabled]="!FormProducts.valid" (click)="save()">Guardar</button>
-                  <button nz-button (click)="clear()" >Clear</button>
-                </div>
-            </div>
-        </div>
+      </nz-tabset>
     </div>
-    </form>
- <div nz-row style="margin-top: 20px;">
-        <div nz-col nzSpan="18" nzOffset="3" class="ant-advanced-search-form">
-            <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 24 }"
-                [nzXXl]="{ span: 24 }">
-                <nz-table [nzData]="listProducts1" [nzFrontPagination]="false" [nzBordered]="true" >
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Código</th>
-                            <th>Estado</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Categoría</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let product of products$ | async;index as i">
-                            <ng-container *ngIf="product.estado == true">
-                                <td>{{ product.producto }}</td>
-                                <td>{{ product.codigo }}</td>
-                                <td>{{ product.estado }}</td>
-                                <td>{{ product.descripcion }}</td>
-                                <td>{{ product.precio }}</td>
-                                <td>{{ product.idCategoria }}</td>
-                                <td> <button nz-button nzType="primary" (click)="edit(product)">Editar</button>
-                                    <nz-divider nzType="vertical"></nz-divider>
-                                    <button nz-button nzType="primary" nzDanger (click)="delete(product,i)">Eliminar</button>
-                                </td>
-                            </ng-container>
-                        </tr>
-                    </tbody>
-                </nz-table>
-            </div>
-        </div>
-         <div nz-col nzSpan="18" nzOffset="3" class="ant-advanced-search-form" style="margin-top: 20px;">
-            <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 24 }"
-                [nzXXl]="{ span: 24 }">
-                <nz-table [nzData]="listProducts1" [nzFrontPagination]="false" [nzBordered]="true">
-                    <thead>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Código</th>
-                            <th>Estado</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Categoría</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let product of products$ | async">
-                            <ng-container *ngIf="product.estado == false">
-                                <td>{{ product.producto }}</td>
-                                <td>{{ product.codigo }}</td>
-                                <td>{{ product.estado }}</td>
-                                <td>{{ product.descripcion }}</td>
-                                <td>{{ product.precio }}</td>
-                                <td>{{ product.idCategoria }}</td>
-                                <td> <button nz-button nzType="primary" (click)="edit(product)">Editar</button>
-                                    <nz-divider nzType="vertical"></nz-divider>
-                                    <button nz-button nzType="primary" nzDanger (click)="delete(product,i)">Eliminar</button>
-                                </td>
-                            </ng-container>
-                        </tr>
-                    </tbody>
-                </nz-table>
-            </div>
-        </div> 
-    </div> 
 </nz-content>

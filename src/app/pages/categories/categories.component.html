@@ -1,0 +1,88 @@
+<nz-content style="margin-top: 10px">
+    <form nz-form class="login-form" [formGroup]="FormCategories">
+        <div nz-row>
+            <div nz-col nzSpan="22" nzOffset="1" class="ant-advanced-search-form">
+                <div nz-row>
+                    <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                    [nzXXl]="{ span: 8 }">
+                    <nz-form-item>
+                        <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>id
+                        </nz-form-label>
+                        <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                            nzErrorTip="No valido">
+                            <input nz-input formControlName="id" />
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+
+                    <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                        [nzXXl]="{ span: 8 }">
+                        <nz-form-item>
+                            <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Nombre
+                            </nz-form-label>
+                            <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                                nzErrorTip="No valido">
+                                <input nz-input formControlName="nombre" />
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>
+
+                    <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 8 }"
+                        [nzXXl]="{ span: 8 }">
+                        <nz-form-item>
+                            <nz-form-label [nzXs]="24" [nzSm]="24" [nzMd]="6" [nzLg]="8" [nzXXl]="8" nzRequired>Tipo
+                            </nz-form-label>
+                            <nz-form-control [nzXs]="24" [nzSm]="24" [nzMd]="16" [nzLg]="16" [nzXXl]="16"
+                                nzErrorTip="No valido">
+                                <nz-select nzAllowClear nzPlaceHolder="Tipo" formControlName="tipo">
+                                    <nz-option *ngFor="let type of types" [nzLabel]="type.id" [nzValue]="type.id">
+                                    </nz-option>
+                                </nz-select>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>
+                </div>
+                <div nz-row>
+                    <div nz-col [nzSpan]="24" class="search-area">
+                      <button nz-button [nzType]="'primary'" [disabled]="!FormCategories.valid" (click)="save()">Guardar</button>
+                      <button nz-button (click)="clear()" >Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </form>
+
+    <div nz-col nzSpan="22" nzOffset="1" class="ant-advanced-search-form" style="margin-top: 20px;">
+        <div nz-col [nzXs]="{ span: 24 }" [nzSm]="{ span: 24 }" [nzMd]="{ span: 24 }" [nzLg]="{ span: 24 }"
+            [nzXXl]="{ span: 24 }">
+            <nz-table [nzData]="listcategories1" [nzFrontPagination]="false" [nzBordered]="true">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let category of categories$ | async;">
+
+                        <td>{{ category.id }}</td>
+                        <td>{{ category.nombre }}</td>
+                        <td>{{ category.tipo }}</td>
+                        <td>
+                            <button nz-button nzType="primary" (click)="edit(category)">Editar</button>
+                        <nz-divider nzType="vertical"></nz-divider>
+                        <button nz-button nzType="primary" nzDanger (click)="delete(category)">Eliminar</button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </nz-table>
+
+        </div>
+    </div>
+
+</nz-content>

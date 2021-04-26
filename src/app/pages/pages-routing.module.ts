@@ -12,6 +12,10 @@ const routes: Routes = [
     {
       path: "products", loadChildren: () => import('./products/products.module').then(m => m.ProductsModule),
       canActivate: [AfterLoginService],
+    },
+    {
+      path: "categories", loadChildren: () => import('./categories/categories.module').then(m => m.CategoriesModule),
+      canActivate: [AfterLoginService],
     }
   ]
  }

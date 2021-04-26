@@ -3,7 +3,7 @@
     {
       "id": 0,
       "nombre": "Tipo A",
-      "tipo": "A"
+      "tipo": "F"
     },
     {
       "id": 1,
@@ -14,6 +14,21 @@
       "id": 2,
       "nombre": "Tipo C",
       "tipo": "C"
+    },
+    {
+      "id": 3,
+      "nombre": "prueba",
+      "tipo": "B"
+    },
+    {
+      "id": 4,
+      "nombre": "333",
+      "tipo": "A"
+    },
+    {
+      "id": 5,
+      "nombre": "333",
+      "tipo": "A"
     }
   ],
   "login": [
@@ -85,16 +100,16 @@
       "precio": "128994",
       "producto": "TRASOLA",
       "descripcion": "strawberry",
-      "idCategoria": 2
+      "idCategoria": 0
     },
     {
       "id": 8,
       "codigo": "11101c63-c8cf-4ea1-a228-5035a21a5067",
-      "estado": true,
+      "estado": false,
       "precio": "247128",
       "producto": "CRUSTATIA",
       "descripcion": "strawberry",
-      "idCategoria": 0
+      "idCategoria": 1
     },
     {
       "id": 9,
@@ -115,12 +130,21 @@
       "idCategoria": 0
     },
     {
-      "id": 14,
-      "codigo": "9ff7c171-67f8-48f1-9473-bb0760c24a7d",
-      "estado": false,
-      "precio": "146472",
-      "producto": "GEOFORM",
-      "descripcion": "apple",
+      "id": 11,
+      "codigo": "13486527-e388-4a1a-b084-e22991eb1b05",
+      "estado": true,
+      "precio": "111.20",
+      "producto": "Prueba",
+      "descripcion": "Prueba",
+      "idCategoria": 0
+    },
+    {
+      "id": 12,
+      "codigo": "096fbd78-4a6b-45f2-ae8a-53f1a663fefd",
+      "estado": true,
+      "precio": "1245",
+      "producto": "prueba",
+      "descripcion": "prueba",
       "idCategoria": 0
     }
   ]

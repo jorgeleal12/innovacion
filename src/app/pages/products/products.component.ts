@@ -21,9 +21,10 @@ export class ProductsComponent implements OnInit {
   products$ = this.products.asObservable();
 
   numberPattern: string = '^-?[0-9]\\d*(\\.\\d{1,2})?$';
-  letters:string='^[a-zA-Z ]+$';
-  letters_number:string='^[a-zA-Z0-9 ]+$';
-  
+  letters: string = '^[a-zA-Z ]+$';
+  letters_number: string = '^[a-zA-Z0-9 ]+$';
+  idCategoria;
+  index;
 
   constructor(private fb: FormBuilder, private productsService: ProductsService, private notificationService: NotificationService) {
     this.FormProducts = this.fb.group({
@@ -31,8 +32,8 @@ export class ProductsComponent implements OnInit {
       codigo: [{ value: null, disabled: true }, [Validators.required]],
       estado: [null, [Validators.required]],
       precio: [null, [Validators.required, Validators.pattern(this.numberPattern)]],
-      producto: [null, [Validators.required,Validators.pattern(this.letters)]],
-      descripcion: [null, [Validators.required,Validators.pattern(this.letters_number)]],
+      producto: [null, [Validators.required, Validators.pattern(this.letters)]],
+      descripcion: [null, [Validators.required, Validators.pattern(this.letters_number)]],
       idCategoria: [null, [Validators.required]],
     })
   }
@@ -59,6 +60,7 @@ export class ProductsComponent implements OnInit {
 
   edit(data) {
     this.FormProducts.patchValue(data);
+    this.idCategoria = this.FormProducts.value.idCategoria;
   }
 
   save() {
@@ -71,17 +73,20 @@ export class ProductsComponent implements OnInit {
 
   create() {
     this.FormProducts.get('codigo').setValue(uuid())
-    this.listProducts = [...this.listProducts, this.FormProducts.getRawValue()];
-    this.products.next(this.listProducts)
+
     this.productsService.CreateProducts(this.FormProducts.getRawValue()).subscribe(res => {
       this.FormProducts.get('id').setValue(res.id)
+      this.listProducts = [...this.listProducts, res];
+      this.products.next(this.listProducts)
       this.notificationService.NotificationSuccess()
+      this.idCategoria = this.FormProducts.value.idCategoria;
     }, err => {
       this.notificationService.NotificationError()
     })
   }
 
   update() {
+
     const res = this.listProducts.findIndex(p =>
       p.id === this.FormProducts.value.id
     )
@@ -109,4 +114,8 @@ export class ProductsComponent implements OnInit {
     this.FormProducts.reset()
   }
 
+  edit_category(event) {
+    this.index = event;
+    this.FindAllCategory();
+  }
 }

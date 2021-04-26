@@ -10,6 +10,8 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { IconsProviderModule } from '../icons-provider.module';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 @NgModule({
     exports: [
@@ -24,6 +26,8 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
         NzLayoutModule,  
         IconsProviderModule,
         NzTableModule,
-        NzSelectModule
+        NzSelectModule,
+        NzModalModule,
+        NzTabsModule
     ]})
 export class NgZorroAntdModule { }
