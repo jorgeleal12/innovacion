@@ -1,0 +1,29 @@
+<nz-layout class="layout">
+    <nz-header>
+      <div class="logo">INNOVACION </div>
+      <ul nz-menu nzMode="horizontal" nzTheme="dark">
+        <li nz-menu-item nzSelected>
+          <i nz-icon nzType="home"></i>
+          <a href="" rel="noopener noreferrer">Home</a>
+        </li>
+       
+        <li nz-menu-item>
+          <i nz-icon nzType="plus-square" ></i>
+          <a routerLink="products">Productos</a>
+        </li>
+        <li nz-menu-item>
+          <i nz-icon nzType="tag"></i>Categorias
+        </li>
+    <div class="logout"> 	<li nz-submenu nzTitle="Salir" (click)="exit()" nzIcon="rollback"></li>
+    </div>
+      </ul>
+  
+    </nz-header>
+  </nz-layout>
+  <nz-content>
+  
+    <router-outlet>
+  
+    </router-outlet>
+  
+  </nz-content>

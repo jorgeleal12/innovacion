@@ -1,0 +1,127 @@
+{
+  "categorias": [
+    {
+      "id": 0,
+      "nombre": "Tipo A",
+      "tipo": "A"
+    },
+    {
+      "id": 1,
+      "nombre": "Tipo B",
+      "tipo": "B"
+    },
+    {
+      "id": 2,
+      "nombre": "Tipo C",
+      "tipo": "C"
+    }
+  ],
+  "login": [
+    {
+      "user": "prueba@prueba.com",
+      "password": "prueba",
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xOC4yMDguMzYuMjhcL2JhY2tlbmRcL3B1YmxpY1wvYXBpXC9pbnNwZWN0aW9uXC9zZWFyY2hfcHJvZ3JhbWluZyIsImlhdCI6MTYxODI3NDc1NSwiZXhwIjoxNjE4ODgxNTgxLCJuYmYiOjE2MTg4ODE1MjEsImp0aSI6InF2RzJqWFZCY2c4R0JlaUsiLCJzdWIiOjEwMzk2Nzk2OTUsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.e7NUU9Y3XDLq2EbIY90doYgAZthQnRMYCGpm0FutXgg"
+    }
+  ],
+  "productos": [
+    {
+      "id": 0,
+      "codigo": "0cb05810-8fbf-422e-8812-dfae728bc20a",
+      "estado": false,
+      "precio": "146472",
+      "producto": "GEOFORM",
+      "descripcion": "apple",
+      "idCategoria": 0
+    },
+    {
+      "id": 1,
+      "codigo": "192b7b00-fbf9-4fbf-8b06-3d8850296905",
+      "estado": false,
+      "precio": "283675",
+      "producto": "GUSHKOOL",
+      "descripcion": "strawberry",
+      "idCategoria": 2
+    },
+    {
+      "id": 2,
+      "codigo": "e1f47511-06ab-4998-bbc2-fab7fc4dad4a",
+      "estado": false,
+      "precio": "260295",
+      "producto": "ECLIPSENT",
+      "descripcion": "strawberry",
+      "idCategoria": 0
+    },
+    {
+      "id": 4,
+      "codigo": "9cee3424-62fb-449f-9e11-97c08c03da5c",
+      "estado": false,
+      "precio": "392879",
+      "producto": "VIRXO",
+      "descripcion": "strawberry",
+      "idCategoria": 1
+    },
+    {
+      "id": 5,
+      "codigo": "7e3f4886-4fbf-410c-b73f-05a7bd16cd8f",
+      "estado": false,
+      "precio": "132384",
+      "producto": "LIQUICOM",
+      "descripcion": "banana",
+      "idCategoria": 2
+    },
+    {
+      "id": 6,
+      "codigo": "a1207f8e-dc98-4ac4-aaec-5bc6db95a3e6",
+      "estado": false,
+      "precio": "196922",
+      "producto": "ARTWORLDS",
+      "descripcion": "banana",
+      "idCategoria": 1
+    },
+    {
+      "id": 7,
+      "codigo": "0669f6f3-dd25-41e0-a754-245aba12f301",
+      "estado": true,
+      "precio": "128994",
+      "producto": "TRASOLA",
+      "descripcion": "strawberry",
+      "idCategoria": 2
+    },
+    {
+      "id": 8,
+      "codigo": "11101c63-c8cf-4ea1-a228-5035a21a5067",
+      "estado": true,
+      "precio": "247128",
+      "producto": "CRUSTATIA",
+      "descripcion": "strawberry",
+      "idCategoria": 0
+    },
+    {
+      "id": 9,
+      "codigo": "487476e8-558e-42a0-b3e9-e8b22725d9e9",
+      "estado": true,
+      "precio": "385479",
+      "producto": "ZYTREK",
+      "descripcion": "strawberry",
+      "idCategoria": 1
+    },
+    {
+      "id": 10,
+      "codigo": "0cb05810-8fbf-422e-8812-dfae728bc20a",
+      "estado": true,
+      "precio": "146472",
+      "producto": "GEOFORM",
+      "descripcion": "apple",
+      "idCategoria": 0
+    },
+    {
+      "id": 14,
+      "codigo": "9ff7c171-67f8-48f1-9473-bb0760c24a7d",
+      "estado": false,
+      "precio": "146472",
+      "producto": "GEOFORM",
+      "descripcion": "apple",
+      "idCategoria": 0
+    }
+  ]
+}

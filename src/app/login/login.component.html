@@ -1,0 +1,41 @@
+<div>
+    <div nz-row nzType="flex" nzJustify="center">
+        <div style="margin-top: 10%" nz-col [nzXs]="{span: 20}" [nzSm]="{span: 12}" [nzMd]="{span: 10}"
+            [nzLg]="{span: 5}" [nzXXl]="{span: 4}" class="md-card">
+            <nz-card [nzCover]="coverTemplate" style="margin-top: 5px"> </nz-card>
+
+            <ng-template #coverTemplate>
+                <img alt="logo" src="../../assets/logo.png" />
+                <!-- <img alt="Logo" src="../../assets/logo.jpeg" /> -->
+            </ng-template>
+
+            <div></div>
+            <form nz-form [formGroup]="FormLogin" class="login-form" (ngSubmit)="submitForm()">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Please input your username!">
+                        <nz-input-group nzPrefixIcon="user">
+                            <input type="text" nz-input formControlName="user" placeholder="Usuario" />
+                        </nz-input-group>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Please input your Password!">
+                        <nz-input-group nzPrefixIcon="lock">
+                            <input type="password" nz-input formControlName="password" placeholder="Contraseña" />
+                        </nz-input-group>
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control>
+
+                        <button nz-button class="login-form-button" [disabled]="!FormLogin.valid" [nzType]="'primary'">
+                            Ingresar
+                        </button>
+                    </nz-form-control>
+                </nz-form-item>
+
+            </form>
+        </div>
+    </div>
+</div>

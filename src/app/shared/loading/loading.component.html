@@ -1,0 +1,7 @@
+<div class="loader" *ngIf="loader==false">
+    <div class="spiner">
+        <ng-template #indicatorTemplate><i nz-icon nzType="loading" style="font-size: 70px;"></i> </ng-template>
+        <nz-spin nzSimple [nzIndicator]="indicatorTemplate"> </nz-spin>
+    </div>
+  </div>
+  
