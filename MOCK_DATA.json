@@ -3,7 +3,7 @@
     {
       "id": 0,
       "nombre": "Tipo H",
-      "tipo": "C"
+      "tipo": "A"
     },
     {
       "id": 1,
@@ -19,16 +19,6 @@
       "id": 3,
       "nombre": "prueba",
       "tipo": "B"
-    },
-    {
-      "id": 4,
-      "nombre": "333",
-      "tipo": "A"
-    },
-    {
-      "id": 5,
-      "nombre": "333",
-      "tipo": "A"
     }
   ],
   "login": [
@@ -96,7 +86,7 @@
     {
       "id": 7,
       "codigo": "0669f6f3-dd25-41e0-a754-245aba12f301",
-      "estado": true,
+      "estado": false,
       "precio": "128994",
       "producto": "TRASOLA",
       "descripcion": "strawberry",
@@ -118,7 +108,7 @@
       "precio": "385479",
       "producto": "ZYTREK",
       "descripcion": "strawberry",
-      "idCategoria": 1
+      "idCategoria": 0
     },
     {
       "id": 10,

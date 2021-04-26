@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotificationService } from '@moduleshared/service/notification.service';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { CategoriesService } from 'src/app/service/categories.service';
 
 @Component({
@@ -41,7 +41,7 @@ export class CategoriesComponent implements OnInit {
   ];
   listcategories1 = [{}]
   listcategories;
-  categories = new BehaviorSubject<any[]>([]);
+  categories:Subject <any> = new Subject<any>();
   categories$ = this.categories.asObservable();
   letters: string = '^[a-zA-Z ]+$';
   FormCategories: FormGroup;

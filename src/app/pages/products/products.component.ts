@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotificationService } from '@moduleshared/service/notification.service';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { ProductsService } from 'src/app/service/products.service';
 import { Products } from '../../model/products';
 import { v4 as uuid } from 'uuid';
@@ -17,7 +17,8 @@ export class ProductsComponent implements OnInit {
   listProducts;
   listProducts1 = [{}];
   listCategories;
-  products = new BehaviorSubject<Products[]>([]);
+  // products = new BehaviorSubject<Products[]>([]);
+  products:Subject <any> = new Subject<Products[]>(); 
   products$ = this.products.asObservable();
 
   numberPattern: string = '^-?[0-9]\\d*(\\.\\d{1,2})?$';
