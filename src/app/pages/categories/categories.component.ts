@@ -45,7 +45,7 @@ export class CategoriesComponent implements OnInit {
   categories$ = this.categories.asObservable();
   letters: string = '^[a-zA-Z ]+$';
   FormCategories: FormGroup;
-  @Input() idCategoria: any
+  @Input() idCategoria: string
   index;
   @Output() ini = new EventEmitter<any>()
 
@@ -60,7 +60,8 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.FindAllCategories();
-    if (!this.idCategoria) {
+   
+    if (this.idCategoria!=undefined) {
       this.FindOneCategory();
     }
   }
