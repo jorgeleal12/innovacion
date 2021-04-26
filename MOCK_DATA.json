@@ -2,12 +2,12 @@
   "categorias": [
     {
       "id": 0,
-      "nombre": "Tipo H",
+      "nombre": "Tipo B",
       "tipo": "B"
     },
     {
       "id": 1,
-      "nombre": "Tipo A",
+      "nombre": "Tipo J",
       "tipo": "A"
     },
     {
@@ -59,11 +59,11 @@
     {
       "id": 4,
       "codigo": "9cee3424-62fb-449f-9e11-97c08c03da5c",
-      "estado": false,
+      "estado": true,
       "precio": "392879",
       "producto": "VIRXO",
       "descripcion": "strawberry",
-      "idCategoria": 1
+      "idCategoria": 2
     },
     {
       "id": 5,
