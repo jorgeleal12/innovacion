@@ -168,8 +168,9 @@
                     </div> 
                 </div> 
         </nz-tab>
-        <nz-tab nzTitle="Categorias">
-            <ng-template nz-tab>
+
+        <nz-tab nzTitle="Categorias" (nzClick)="select_index()">
+        <ng-template nz-tab>
          <app-categories  [idCategoria]="idCategoria" (ini)="edit_category($event)">
 
          </app-categories>

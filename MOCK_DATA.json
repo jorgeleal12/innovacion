@@ -3,12 +3,12 @@
     {
       "id": 0,
       "nombre": "Tipo H",
-      "tipo": "A"
+      "tipo": "B"
     },
     {
       "id": 1,
-      "nombre": "Tipo B",
-      "tipo": "B"
+      "nombre": "Tipo A",
+      "tipo": "A"
     },
     {
       "id": 2,
@@ -95,11 +95,11 @@
     {
       "id": 8,
       "codigo": "11101c63-c8cf-4ea1-a228-5035a21a5067",
-      "estado": false,
+      "estado": true,
       "precio": "247128",
       "producto": "CRUSTATIA",
       "descripcion": "strawberry",
-      "idCategoria": 1
+      "idCategoria": 0
     },
     {
       "id": 9,

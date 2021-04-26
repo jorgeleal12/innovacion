@@ -41,7 +41,7 @@ export class CategoriesComponent implements OnInit {
   ];
   listcategories1 = [{}]
   listcategories;
-  categories:Subject <any> = new Subject<any>();
+  categories: Subject<any> = new Subject<any>();
   categories$ = this.categories.asObservable();
   letters: string = '^[a-zA-Z ]+$';
   FormCategories: FormGroup;
@@ -60,8 +60,8 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.FindAllCategories();
-   
-    if (this.idCategoria!=undefined) {
+
+    if (this.idCategoria != undefined) {
       this.FindOneCategory();
     }
   }
@@ -123,7 +123,7 @@ export class CategoriesComponent implements OnInit {
     this.listcategories[res] = this.FormCategories.getRawValue();
     this.categories.next(this.listcategories);
     this.categoriesService.UpdateCategory(this.FormCategories.getRawValue()).subscribe(res => {
-      this.notificationService.NotificationUpdate(); 
+      this.notificationService.NotificationUpdate();
       if (this.idCategoria != null) {
         this.index = 0;
         this.ini.emit(this.index)

@@ -116,7 +116,13 @@ export class ProductsComponent implements OnInit {
   }
 
   edit_category(event) {
+    console.log(event)
     this.index = event;
     this.FindAllCategory();
+  }
+  select_index(){
+    console.log(1)
+    this.index =1;
+    console.log(this.index)
   }
 }
